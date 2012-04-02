@@ -8,6 +8,10 @@
 include_recipe "screen"
 include_recipe "java::oracle"
 
+user node[:minecraft][:user] do
+  home node[:minecraft][:dir]
+end
+
 directory "#{node[:minecraft][:dir]}" do
   owner "#{node[:minecraft][:user]}"
   action :create
