@@ -20,7 +20,7 @@ OPTIONS='nogui'
 USERNAME=<%= node[:minecraft][:user] %>
 WORLD='world'
 MCPATH='<%= node[:minecraft][:dir] %>'
-BACKUPPATH='<%= node[:minecraft][:dir] ?>/backup'
+BACKUPPATH='<%= node[:minecraft][:dir] %>/backup'
 CPU_COUNT=2
 INVOCATION="java -Xmx1024M -Xms1024M -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalPacing -XX:ParallelGCThreads=$CPU_COUNT -XX:+AggressiveOpts -jar $SERVICE $OPTIONS"
 
