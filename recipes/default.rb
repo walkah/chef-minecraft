@@ -6,7 +6,7 @@
 #
 
 include_recipe "screen"
-include_recipe "java::oracle"
+include_recipe "java"
 
 user node[:minecraft][:user] do
   home node[:minecraft][:dir]

@@ -1,7 +1,22 @@
 {
   "sources": {
-    "chef-minecraft": {
+    "minecraft": {
       "path": "."
+    },
+    "apt": {
+      "locked_version": "2.3.0"
+    },
+    "java": {
+      "locked_version": "1.15.4"
+    },
+    "windows": {
+      "locked_version": "1.11.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "aws": {
+      "locked_version": "1.0.0"
     },
     "screen": {
       "locked_version": "0.8.0"
@@ -10,28 +25,16 @@
       "locked_version": "2.7.0"
     },
     "dmg": {
-      "locked_version": "2.0.8"
+      "locked_version": "2.0.6"
     },
     "build-essential": {
       "locked_version": "1.4.2"
     },
     "yum": {
-      "locked_version": "2.4.2"
-    },
-    "windows": {
-      "locked_version": "1.11.0"
-    },
-    "chef_handler": {
-      "locked_version": "1.1.4"
+      "locked_version": "2.4.0"
     },
     "runit": {
-      "locked_version": "1.4.0"
-    },
-    "java": {
-      "locked_version": "1.15.4"
-    },
-    "aws": {
-      "locked_version": "1.0.0"
+      "locked_version": "1.3.0"
     }
   }
 }
