@@ -20,7 +20,8 @@ end
 remote_file "#{node[:minecraft][:dir]}/minecraft_server.jar" do
   owner "#{node[:minecraft][:user]}"
   mode 0644
-  source "http://s3.amazonaws.com/MinecraftDownload/launcher/minecraft_server.jar"
+  source node[:minecraft][:url]
+  checksum node[:minecraft][:checksum]
 end
 
 template "/etc/init.d/minecraft" do

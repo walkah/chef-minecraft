@@ -19,3 +19,6 @@
 # General settings
 default['minecraft']['dir'] = '/home/minecraft'
 default['minecraft']['user'] = 'minecraft'
+
+default['minecraft']['url'] = "https://s3.amazonaws.com/Minecraft.Download/versions/1.7.2/minecraft_server.1.7.2.jar"
+default['minecraft']['checksum'] = "b4139899700c"
