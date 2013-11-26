@@ -12,4 +12,3 @@ supports "debian"
 
 depends "apt"
 depends "java"
-depends "screen"

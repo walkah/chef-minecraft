@@ -16,7 +16,6 @@
 # limitations under the License.
 #
 
-include_recipe "screen"
 include_recipe "java"
 
 user node[:minecraft][:user] do
@@ -35,13 +34,14 @@ remote_file "#{node[:minecraft][:dir]}/minecraft_server.jar" do
   checksum node[:minecraft][:checksum]
 end
 
-template "/etc/init.d/minecraft" do
-  source "minecraft"
-  mode 0755
+service "minecraft" do
+  provider Chef::Provider::Service::Upstart
+  supports :status => true, :restart => true, :reload => true
 end
 
-execute "starting minecraft server" do 
-  command "/etc/init.d/minecraft start"
-  user "#{node[:minecraft][:user]}"
-  action :run
+template "minecraft.conf" do
+  path "/etc/init/minecraft.conf"
+  source "minecraft.conf.erb"
+  mode "0644"
+  notifies :restart, resources(:service => "minecraft")
 end

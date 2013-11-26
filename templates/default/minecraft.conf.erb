@@ -1,0 +1,10 @@
+console log
+
+exec start-stop-daemon --start --chdir <%= node['minecraft']['dir'] %> --chuid <%= node['minecraft']['user'] %> \
+    --exec /usr/bin/java -- <%= node['minecraft']['opts'] %> -jar minecraft_server.jar nogui 2>&1
+
+start on runlevel [2345]
+stop on runlevel [^2345]
+
+respawn
+respawn limit 20 5
